@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+coverage/
+tmp/
+temp/
+.cache/
+.angular/
+.angular/cache/
+out-tsc/
+frontend/out-tsc/
+backend/out/
+
+# Environment files
+.env
+*.env
+backend/.env
+
+# IDE / Editor settings
+.idea/
+.vscode/
+*.code-workspace
+.history/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
