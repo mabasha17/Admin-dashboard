@@ -322,3 +322,7 @@ admin/
 - Promote regular users to admin
 - Activate/Deactivate user accounts
 - Delete users (with self-deletion protection)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3bfebb03f00f21cd9cd4e5a6c369b37193195e9a
