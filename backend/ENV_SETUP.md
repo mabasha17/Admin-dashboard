@@ -10,8 +10,7 @@ PORT=5000
 # For local MongoDB:
 MONGO_URI=mongodb://localhost:27017/admin-dashboard
 
-# For MongoDB Atlas:
-# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/admin-dashboard?retryWrites=true&w=majority
+
 
 # JWT Secret Key (Change this to a strong random string in production)
 JWT_SECRET=your-super-secret-jwt-key-change-this-in-production-min-32-chars
