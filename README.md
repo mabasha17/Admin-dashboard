@@ -2,7 +2,7 @@
 
 A full-stack MEAN (MongoDB, Express.js, Angular, Node.js) application for admin dashboard with analytics, reporting, and user management features.
 
-## 🚀 Features
+## Features
 
 - **Authentication & Authorization**
 
@@ -30,7 +30,7 @@ A full-stack MEAN (MongoDB, Express.js, Angular, Node.js) application for admin 
   - Responsive charts and tables
   - Modern, clean interface
 
-## 📋 Tech Stack & Versions
+## Tech Stack & Versions
 
 ### Backend
 
@@ -54,7 +54,7 @@ A full-stack MEAN (MongoDB, Express.js, Angular, Node.js) application for admin 
 - **ng2-charts** - v8.0.0 (Angular Chart.js Wrapper)
 - **RxJS** - v7.8.0 (Reactive Extensions)
 
-## 📦 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -80,7 +80,7 @@ ng version      # Should be v16.x or higher
 mongod --version  # Should be v6.x or higher
 ```
 
-## ⚡ Quick Start (5 Minutes)
+## Quick Start (5 Minutes)
 
 If you're in a hurry, follow these steps:
 
@@ -193,13 +193,12 @@ npm install chart.js@^4.4.0 ng2-charts@^8.0.0
 ### 6. Start Frontend Development Server
 
 ```bash
-
 ng serve -o
 ```
 
 Frontend will run on `http://localhost:4200`
 
-## 📱 Usage
+## Usage
 
 ### Default Login Credentials
 
@@ -223,7 +222,7 @@ After seeding the database:
 3. Login with admin credentials to access the full dashboard
 4. Regular users can only access the dashboard (limited features)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 admin/
@@ -275,7 +274,7 @@ admin/
     └── tsconfig.json
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 
@@ -298,7 +297,7 @@ admin/
 
 - `GET /api/health` - API health status
 
-## 🔒 Security Features
+## Security Features
 
 - JWT token-based authentication
 - Password hashing with bcrypt
@@ -306,7 +305,7 @@ admin/
 - Protected API routes
 - CORS enabled for frontend communication
 
-## 🎨 Features in Detail
+## Features in Detail
 
 ### Dashboard Analytics
 
@@ -323,19 +322,3 @@ admin/
 - Promote regular users to admin
 - Activate/Deactivate user accounts
 - Delete users (with self-deletion protection)
-
-## 🧪 Testing
-
-### Backend
-
-```bash
-cd backend
-npm test  # If tests are configured
-```
-
-### Frontend
-
-```bash
-cd frontend
-ng test
-```
