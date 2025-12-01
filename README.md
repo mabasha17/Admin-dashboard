@@ -135,11 +135,7 @@ JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
 NODE_ENV=development
 ```
 
-**For MongoDB Atlas:**
 
-```env
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/admin-dashboard?retryWrites=true&w=majority
-```
 
 ### 3. Seed the Database (Highly Recommended)
 
