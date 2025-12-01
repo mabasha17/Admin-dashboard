@@ -1,0 +1,96 @@
+<div *ngIf="loading" class="alert alert-info">Loading dashboard...</div>
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<div *ngIf="!loading && !error">
+  <!-- Metric Cards -->
+  <div class="row mb-3">
+    <div class="col-12 col-md-3 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6 class="text-muted">Total Users</h6>
+          <h3>{{ overview.totalUsers }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6 class="text-muted">Active Sessions</h6>
+          <h3>{{ overview.activeSessions }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6 class="text-muted">Total Sales</h6>
+          <h3>{{ overview.totalSales }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6 class="text-muted">Revenue</h6>
+          <h3>₹{{ overview.totalRevenue | number }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="row">
+    <!-- Line chart -->
+    <div class="col-12 col-lg-8 mb-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h6 class="card-title mb-3">User Sign-ups (Last 30 days)</h6>
+          <div style="height: 300px; position: relative">
+            <canvas
+              baseChart
+              [type]="signupsLineChartType"
+              [data]="signupsLineChartData"
+              [options]="signupsLineChartOptions"
+            >
+            </canvas>
+            <div
+              *ngIf="signupsLineChartData.labels?.length === 0"
+              class="d-flex align-items-center justify-content-center h-100 text-muted"
+            >
+              No data available
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doughnut chart -->
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h6 class="card-title mb-3">Sales by Category</h6>
+          <div style="height: 300px; position: relative">
+            <canvas
+              baseChart
+              [type]="salesDoughnutChartType"
+              [data]="salesDoughnutChartData"
+              [options]="salesDoughnutChartOptions"
+            >
+            </canvas>
+            <div
+              *ngIf="salesDoughnutChartData.labels?.length === 0"
+              class="d-flex align-items-center justify-content-center h-100 text-muted"
+            >
+              No data available
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

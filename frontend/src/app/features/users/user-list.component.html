@@ -1,0 +1,61 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title mb-3">User Management</h5>
+
+    <div *ngIf="loading" class="alert alert-info">Loading users...</div>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+    <div class="table-responsive" *ngIf="!loading && !error">
+      <table class="table table-sm table-striped align-middle">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th style="width: 250px">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.status }}</td>
+            <td>
+              <div class="btn-group" role="group">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  (click)="promote(user)"
+                  [disabled]="user.role === 'admin'"
+                  title="Promote to Admin"
+                >
+                  Promote
+                </button>
+                <button
+                  class="btn btn-outline-warning btn-sm"
+                  (click)="toggleStatus(user)"
+                  [title]="user.status === 'active' ? 'Deactivate User' : 'Activate User'"
+                >
+                  {{ user.status === 'active' ? 'Deactivate' : 'Activate' }}
+                </button>
+                <button
+                  class="btn btn-outline-danger btn-sm"
+                  (click)="delete(user)"
+                  title="Delete User"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="users.length === 0">
+            <td colspan="5" class="text-center text-muted py-3">
+              No users found.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

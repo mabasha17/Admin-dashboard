@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand navbar-light bg-light px-3">
+  <span class="navbar-brand mb-0 h5">Admin Dashboard</span>
+
+  <div class="ms-auto d-flex align-items-center">
+    <span class="me-3" *ngIf="user() as u"> {{ u.name }} ({{ u.role }}) </span>
+    <button class="btn btn-outline-secondary btn-sm" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</nav>

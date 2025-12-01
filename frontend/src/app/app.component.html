@@ -1,0 +1,17 @@
+<div class="d-flex" *ngIf="isAuthenticated(); else authLayout">
+  <app-sidebar class="d-none d-md-block"></app-sidebar>
+
+  <div class="flex-grow-1">
+    <app-navbar></app-navbar>
+
+    <main class="container-fluid py-3">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<ng-template #authLayout>
+  <div class="container py-5">
+    <router-outlet></router-outlet>
+  </div>
+</ng-template>
