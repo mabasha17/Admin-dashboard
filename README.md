@@ -324,18 +324,3 @@ admin/
 - Activate/Deactivate user accounts
 - Delete users (with self-deletion protection)
 
-## 🧪 Testing
-
-### Backend
-
-```bash
-cd backend
-npm test  # If tests are configured
-```
-
-### Frontend
-
-```bash
-cd frontend
-ng test
-```
